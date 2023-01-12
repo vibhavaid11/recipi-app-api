@@ -4,6 +4,7 @@ services:
   app:
     build:
       context: .
+<<<<<<< HEAD
       args:
         - DEV=true
     ports:
@@ -12,3 +13,11 @@ services:
       - ./app:/app
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8080"
+=======
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
+>>>>>>> 67ff50074e47c0be22aa1b3a7c7b51e1a5320121
